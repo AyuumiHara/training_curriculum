@@ -36,7 +36,7 @@ class CalendarsController < ApplicationController
       end
       # 変更前 days = { :month => (@todays_date + x).month, :date => (@todays_date+x).day, :plans => today_plans}
       # ↓ハッシュをシンボル型へ
-      days = {month :(@todays_date + x).month, date :(@todays_date+x).day, plans :today_plans}
+      days = {month: (@todays_date + x).month, date: (@todays_date+x).day, plans: today_plans}
       @week_days.push(days)
     end
 
