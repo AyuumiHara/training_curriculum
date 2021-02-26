@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   root 'calendars#index'
-  resources :calendars
+  get 'plans', to: 'calendars#create'
+  resources :calendars, only: [:index, :new, :create]
 end
